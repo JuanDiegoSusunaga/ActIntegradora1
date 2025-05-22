@@ -1,14 +1,14 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <gtest/gtest.h>
 #include "main.cpp"
+#include <fstream>
 
-TEST_CASE("leerArchivo - contenido correcto") {
-    ofstream archivo("test_temp.txt");
-    archivo << "Hola mundo";
-    archivo.close();
+TEST(LeerArchivoTest, ArchivoExistente) {
+    std::ofstream testFile("testfile.txt");
+    testFile << "Hola mundo";
+    testFile.close();
 
-    string contenido = leerArchivo("test_temp.txt");
-    CHECK(contenido == "Hola mundo");
+    std::string contenido = leerArchivo("testfile.txt");
+    EXPECT_EQ(contenido, "Hola mundo");
 
-    remove("test_temp.txt");
+    std::remove("testfile.txt");
 }
