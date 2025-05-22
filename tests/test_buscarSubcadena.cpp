@@ -1,13 +1,16 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <gtest/gtest.h>
 #include "main.cpp"
 
-TEST_CASE("buscarSubcadena - subcadena presente") {
-    string texto = "Este es un mensaje secreto";
-    CHECK(buscarSubcadena(texto, "mensaje") == 10);
+TEST(BuscarSubcadenaTest, SubcadenaPresente) {
+    std::string texto = "Este es un mensaje secreto";
+    std::string patron = "mensaje";
+    int pos = buscarSubcadena(texto, patron);
+    EXPECT_EQ(pos, 11);
 }
 
-TEST_CASE("buscarSubcadena - subcadena ausente") {
-    string texto = "Texto limpio";
-    CHECK(buscarSubcadena(texto, "virus") == -1);
+TEST(BuscarSubcadenaTest, SubcadenaAusente) {
+    std::string texto = "Este es un mensaje secreto";
+    std::string patron = "clave";
+    int pos = buscarSubcadena(texto, patron);
+    EXPECT_EQ(pos, -1);
 }
