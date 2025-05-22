@@ -55,10 +55,13 @@ if(ENABLE_TESTING)
     endfunction()
 
     # Archivos de pruebas
-    add_test_executable(ExpandirCentroTest test/ExpandirCentroTest.cpp)
-    add_test_executable(BuscarSubcadenaTest test/BuscarSubcadenaTest.cpp)
-    add_test_executable(PalindromoMasLargoTest test/PalindromoMasLargoTest.cpp)
-    add_test_executable(LCSTest test/LCSTest.cpp)
+    add_test_executable(BuscarSubcadenaTest tests/test_buscarSubcadena.cpp)
+    add_test_executable(ExpandirCentroTest tests/test_expandirCentro.cpp)
+    add_test_executable(LCSTest tests/test_lcs.cpp)
+    add_test_executable(LeerArchivoTest tests/test_leerArchivo.cpp)
+    add_test_executable(PalindromoMasLargoTest tests/test_palindromoMasLargo.cpp)
+
+
 
 
 
