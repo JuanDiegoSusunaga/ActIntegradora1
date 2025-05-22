@@ -57,7 +57,6 @@ if(ENABLE_TESTING)
     # Archivos de pruebas
     add_test_executable(ExpandirCentroTest test/ExpandirCentroTest.cpp)
     add_test_executable(BuscarSubcadenaTest test/BuscarSubcadenaTest.cpp)
-    add_test_executable(BuscarSubcadenaTest test/BuscarSubcadenaTest.cpp)
     add_test_executable(PalindromoMasLargoTest test/PalindromoMasLargoTest.cpp)
     add_test_executable(LCSTest test/LCSTest.cpp)
 
