@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "../src/main.cpp"
+#include "main.cpp"
 
 TEST_CASE("palindromoMasLargo - caso normal") {
     auto [inicio, fin, pal] = palindromoMasLargo("abcddcba");
