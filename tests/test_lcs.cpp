@@ -1,17 +1,16 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <gtest/gtest.h>
 #include "main.cpp"
 
-TEST_CASE("lcs - caso común") {
-    string X = "abcde";
-    string Y = "abfce";
-    auto [sx, ex, sy, ey, substr] = lcs(X, Y);
-    CHECK(substr == "ab");
+TEST(LCSTest, CoincidenciaParcial) {
+    std::string a = "mensaje secreto";
+    std::string b = "secreto cifrado";
+    auto [sx, ex, sy, ey, substr] = lcs(a, b);
+    EXPECT_EQ(substr, "secreto");
 }
 
-TEST_CASE("lcs - sin coincidencias") {
-    string X = "abc";
-    string Y = "xyz";
-    auto [sx, ex, sy, ey, substr] = lcs(X, Y);
-    CHECK(substr == "");
+TEST(LCSTest, SinCoincidencia) {
+    std::string a = "abc";
+    std::string b = "xyz";
+    auto [sx, ex, sy, ey, substr] = lcs(a, b);
+    EXPECT_EQ(substr, "");
 }
