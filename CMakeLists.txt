@@ -14,6 +14,11 @@ include_directories(${CMAKE_SOURCE_DIR})
 # Archivos fuente principales
 set(SOURCES
         main.cpp
+        mcode1.txt
+        mcode2.txt
+        mcode3.txt
+        transmission1.txt
+        transmission2.txt
 )
 
 # Crear el ejecutable principal
