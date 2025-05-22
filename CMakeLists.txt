@@ -55,9 +55,13 @@ if(ENABLE_TESTING)
     endfunction()
 
     # Archivos de pruebas
-    add_test_executable(test_sum test/test_sum.cpp)
-    add_test_executable(test_sub test/test_sub.cpp)
-    add_test_executable(test_divide test/test_divide.cpp)
+    add_test_executable(ExpandirCentroTest test/ExpandirCentroTest.cpp)
+    add_test_executable(BuscarSubcadenaTest test/BuscarSubcadenaTest.cpp)
+    add_test_executable(BuscarSubcadenaTest test/BuscarSubcadenaTest.cpp)
+    add_test_executable(PalindromoMasLargoTest test/PalindromoMasLargoTest.cpp)
+    add_test_executable(LCSTest test/LCSTest.cpp)
+
+
 
     # Generar reportes de cobertura
     if (ENABLE_COVERAGE)
