@@ -1,11 +1,12 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <gtest/gtest.h>
 #include "main.cpp"
 
-TEST_CASE(expandirCentro, palindromocentral) {
-    string s = "abacaba";
+TEST(ExpandirCentroTest, PalindromoCentral) {
+    std::string s = "abacaba";
     int inicio = 0, maxLong = 0;
+
     expandirCentro(s, 3, 3, inicio, maxLong);
-    CHECK(inicio == 0);
-    CHECK(maxLong == 7);
+
+    EXPECT_EQ(inicio, 0);
+    EXPECT_EQ(maxLong, 7);
 }
