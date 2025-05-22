@@ -1,15 +1,16 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include <gtest/gtest.h>
 #include "main.cpp"
 
-TEST_CASE("palindromoMasLargo - caso normal") {
-    auto [inicio, fin, pal] = palindromoMasLargo("abcddcba");
-    CHECK(inicio == 1);
-    CHECK(fin == 8);
-    CHECK(pal == "abcddcba");
+TEST(PalindromoMasLargoTest, ConPalindromo) {
+    std::string s = "abcxyzyxdef";
+    auto [inicio, fin, pal] = palindromoMasLargo(s);
+    EXPECT_EQ(pal, "xyzyx");
+    EXPECT_EQ(inicio, 4);
+    EXPECT_EQ(fin, 8);
 }
 
-TEST_CASE("palindromoMasLargo - sin palíndromos largos") {
-    auto [inicio, fin, pal] = palindromoMasLargo("abc");
-    CHECK(pal == "a");
+TEST(PalindromoMasLargoTest, SinPalindromo) {
+    std::string s = "abcde";
+    auto [inicio, fin, pal] = palindromoMasLargo(s);
+    EXPECT_EQ(pal.length(), 1);
 }
