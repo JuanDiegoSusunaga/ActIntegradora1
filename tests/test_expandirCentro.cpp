@@ -2,7 +2,7 @@
 #include "doctest.h"
 #include "main.cpp"
 
-TEST_CASE("expandirCentro - palíndromo central") {
+TEST_CASE(expandirCentro, palindromocentral) {
     string s = "abacaba";
     int inicio = 0, maxLong = 0;
     expandirCentro(s, 3, 3, inicio, maxLong);
